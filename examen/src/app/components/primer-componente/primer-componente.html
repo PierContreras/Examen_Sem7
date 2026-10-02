@@ -1,0 +1,34 @@
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <p>Aprende un idioma, descubre un mundo nuevo.</p>
+      <div><a href="tel:+525555555555">+52 55 5555 5555</a><span aria-hidden="true">|</span><a href="mailto:hola&#64;globallanguages.edu">hola&#64;globallanguages.edu</a></div>
+    </div>
+  </div>
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="Global Languages, inicio" (click)="closeMenu()">
+      <span class="brand-mark" aria-hidden="true">G<span>.</span></span>
+      <span class="brand-name">GLOBAL<span> LANGUAGES</span><small>ESCUELA DE IDIOMAS</small></span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="main-navigation"
+      (click)="toggleMenu()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-navigation" class="main-navigation" [class.is-open]="menuOpen()" aria-label="Navegación principal">
+      <a href="#inicio" (click)="closeMenu()">Inicio</a>
+      <a href="#idiomas" (click)="closeMenu()">Idiomas</a>
+      <a href="#programas" (click)="closeMenu()">Programas</a>
+      <a href="#nosotros" (click)="closeMenu()">Nosotros</a>
+      <a href="#testimonios" (click)="closeMenu()">Opiniones</a>
+      <a class="nav-cta" href="#horarios" (click)="closeMenu()">Inscríbete <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
