@@ -10,6 +10,12 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Angular build cache and generated output
+.angular/
+dist/
+out-tsc/
+*.tsbuildinfo
+
 # Runtime data
 pids
 *.pid
